@@ -9,5 +9,6 @@ Description: UI wrapper around Canpango beer API. Built in JS/HTML/CSS
 
 Enjoy!
 
-Erik
+Erik White,
+
 Junior Full-Stack Dev Candidate
