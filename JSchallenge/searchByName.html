@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BEERS!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+  </head>
+  <body>
+      
+
+      <div class = "container-fluid">          
+          <h1 class="text-primary">Search Beers by Name:<h1>
+          <br />
+          <hr />
+          <form class="form-inline" id="searchForm" onSubmit= "searchByName(document.getElementById('searchBar').value); return false;">
+            <input class="form-control mr-sm-2" id="searchBar" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type = "submit">Search</button>
+          </form>          
+          <hr />
+          <div id ="tableOfBeers" style = "display:none">
+            <table class = "table table-hover" id = "beerTable">
+                <thead class = "thead-dark">
+                  <tr>
+                    <th scope = "col">Name</th>
+                    <th scope = "col">Style</th>
+                    <th scope = "col">ABV</th>
+                    <th scope = "col">   </th>
+                  </tr>
+                </thead>
+                <tbody id = "tableBod">
+                </tbody>
+            </table>
+          </div>
+          <div id = "noResults" style ="display:none">
+            <h3 class = "text-center"><em>No Results</em></h3>
+          </div>
+          <div id = "viewBeerFrame" style = "display:none">
+            <div class = "row">
+                <div id ="beerName" class="col-md-12">
+                </div>           
+                
+            </div>
+            <div class = "row">
+                <div id = "breweryLocation" class = "col-md-12">
+                </div>
+            </div>
+            <div class = "row">
+                <div id = "beerStyle" class="col-lg-6">
+                </div>
+            </div>            <br>
+            <div class="row">
+                <div id = "beerIbu" class="col-md-4">
+                </div>
+            </div>
+            <div class = "row">
+                <div id = "beerCalories" class = "col-md-4">            
+                </div>
+            </div>
+            <div class="row">
+                <div id = "beerAbv" class="col-md-4">
+                </div>  
+            </div>
+            <div id = "closeButton">
+                <button class = "btn btn-secondary" onclick="backToSearch()">Back to Search</button>
+            </div>
+            
+          </div>
+      </div>    
+  
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="scripts/index.js"></script>
+      <script src="scripts/searchName.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

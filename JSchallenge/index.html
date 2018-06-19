@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BEERS!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="ico/favicon.png">
+  </head>
+  <body>
+      <div id="beerNav" class="sidenav">
+          
+          <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+          
+          <div id = "buttonGroupTextWithIcons">
+              <a title = "Collapse"><span class="beerIcon" onclick="toggleNav('buttonGroupTextWithIcons')"></span></a>
+              <br />
+              <a href="#" onclick = "iframeToggle('searchByCat','search')"><span class= "fas fa-tasks"></span>  Search by Category</a>
+              <a href="#" onclick = "iframeToggle('searchByName', 'search')"><span class= "fas fa-search"></span>  Search by Name</a>
+              <a href="#" onclick= "iframeToggle('addBeer', 'search')"><span class= "fas fa-plus-square"></span>  Add a Beer</a>              
+          </div>
+          <div id = "buttonGroupIcons">
+              <a title = "Expand"><span class="beerIcon" onclick="toggleNav('buttonGroupIcons')"></span></a>
+              <br />
+              <a href="#" title = "Search by Category" onclick = "iframeToggle('searchByCat','search')"><span class= "fas fa-tasks"></span></a>
+              <a href="#" title  = "Search by Name" onclick = "iframeToggle('searchByName', 'search')"><span class= "fas fa-search"></span></a>
+              <a href="#" title = "Add a Beer" onclick= "iframeToggle('addBeer', 'search')"><span class= "fas fa-plus-square"></span></a>              
+          </div>
+      </div>
+
+      <div id="landing" class = "container-fluid">
+          <div class = "container">
+              <div class = "jumbotron" style = "background-color: #7fb17f"><h1 class = "text-center">Welcome to <strong>BEERS!</strong></h1></div>
+              <br />
+              
+          </div>
+      </div>
+      <div id = "iFrameArea" style = "display:none; height: 100vh;" class = "container-fluid"> 
+        <div class ="container" >
+            <iframe src = "" id = "search" style = "height: 80vh; width: 100%" frameBorder = "0"></iframe>
+        </div>
+      </div>
+      
+    
+  
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="scripts/index.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
